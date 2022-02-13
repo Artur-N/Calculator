@@ -1,16 +1,14 @@
-def temperature_view(senson):
-    data = prov.get_temperature(senson)
-    log.temperature_logger(data)
-    return data
+from datetime import datetime as dt
+from time import time
 
+def Complex_log (data, oper, res):
+    time = dt.now().strftime('%H:%M')
+    with open('log.csv', 'a') as file:
+        file.write('{};input complex_digits;{};operation;{};result{}\n'
+                    .format(time, data, oper, res))
 
-def pressure_view(senson):
-    data = prov.get_preassure(senson)
-    log.pressure_logger(data)
-    return data
-
-    
-def wind_speed_view(senson):
-    data = prov.get_wind_speed(senson)
-    log.wind_speed_logger(data)
-    return data
+def Rational_log (data, oper, res):
+    time = dt.now().strftime('%H:%M')
+    with open('log.csv', 'a') as file:
+        file.write('{};input complex_digits;{};operation;{};result{}\n'
+                    .format(time, data, oper, res))
