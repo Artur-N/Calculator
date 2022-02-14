@@ -9,7 +9,6 @@ import converter as conv
 x = conv.get_value()
 y = conv.get_value()
 
-
 """
 Шаг 2  - Вычислить
 """
@@ -26,11 +25,9 @@ def calculation (x, y, op):
     return res
 
 result = calculation(x, y, op)
-print(type(result))
-print(result)
 
 """
-Шаг 4 - Отправить аргументы, операцию и результат в логгер - нужен конвертер
+Шаг 3 - Отправить аргументы, операцию и результат в логгер - нужен конвертер
 """
 if type(result) == 'complex':
     print('it is complex')
