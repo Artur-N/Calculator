@@ -27,6 +27,3 @@ def in_modul():
         print(key, '->', type[key])
     type_key = int(input())
     return type_key
-
-def result():
-    print(ctrl.result())
