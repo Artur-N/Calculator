@@ -1,5 +1,5 @@
 from fractions import Fraction
-import controller as ctrl
+
 def in_operation():
     print("Выберите необходимую операцию:")
     op = {"1": "Сложение", "2" :"Вычитание", "3": "Деление", "4": "Умножение"}
