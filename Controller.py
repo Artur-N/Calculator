@@ -1,4 +1,3 @@
-from operator import mod
 import view
 import fract_md as fract
 import complex_md as cmplx
