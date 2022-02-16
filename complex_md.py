@@ -1,6 +1,5 @@
 import view
-
-op = view.in_operation()
+import Logger as log
 operation = {
     1: lambda x,y: x+y,
     2: lambda x,y: x-y,
@@ -8,10 +7,12 @@ operation = {
     4: lambda x,y: x*y
     }
 
-def calculation (x, y, oper = operation[op]):
-    return oper(x,y)
+def calculation (x, y, op):
+    result = operation[op](x,y)
+    log.Complex_log(x,y,op,result)
+    return result
 
-def input():
+def input(op):
     x = view.in_complex('1')
     y = view.in_complex('2')
-    return calculation(x,y)
+    return calculation(x,y,op)
