@@ -8,14 +8,14 @@ def in_operation():
     op_key = int(input())
     return op_key
 
-def in_complex():
-    a = input()
+def in_complex(str):
+    a = input(f"Введите {str} число: ")
     cmplx = a.split('+')
     x = complex(int(cmplx[0]), int(cmplx[1]))
     return x
 
-def in_fraction():
-    a = input()
+def in_fraction(str):
+    a = input(f"Введите {str} число: ")
     frctn = a.split('/')
     x = Fraction(int(frctn[0]), int(frctn[1]))
     return x
@@ -27,3 +27,6 @@ def in_modul():
         print(key, '->', type[key])
     type_key = int(input())
     return type_key
+
+def print_res(result):
+    print(result)
